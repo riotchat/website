@@ -10,21 +10,32 @@ const NextI18NextInstance = new NextI18Next({
 	browserLanguageDetection: true
 })
 
-export default NextI18NextInstance;
-export const {
-	appWithTranslation,
-	withTranslation,
-} = NextI18NextInstance;
 
-i18next
-	.use(NextI18NextInstance)
+export default NextI18NextInstance;
+
+initReactI18next
+	.init(i18next);
+
+export function translate(string: any) {
+	return i18next.t(string);
+}
+
+export var i18loaded = false;
+export function loadi18() {
+	return i18next.use(NextI18NextInstance)
 	.use(LanguageDetector)
 	.init({
 		fallbackLng: 'en-GB',
 		interpolation: {
 			escapeValue: false
 		}
-	});
+	}).then(() => i18loaded = true)
+}
 
-initReactI18next
-	.init(i18next);
+export function withTranslation(component: any) {
+	if ((process as any).browser) {
+		return NextI18NextInstance.withTranslation('common')(component);
+	} else {
+		return component;
+	}
+}

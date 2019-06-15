@@ -1,20 +1,13 @@
 import * as React from 'react';
+import { translate, withTranslation } from '../src/i18n';
 
-import { PageType } from '../src/Page';
-import { withTranslation } from '../src/i18n'
-
-interface ErrorTypes extends PageType {
-	statusCode: number
-};
-
-class ErrorPage extends React.Component<ErrorTypes> {
+class ErrorPage extends React.Component<{statusCode: number}> {
 	static getInitialProps({ res, err }) {
 		const statusCode = res ? res.statusCode : err ? err.statusCode : null
 		return { statusCode }
 	}
 
 	render() {
-		const translate = this.props.t;
 		if (this.props.statusCode === 404) {
     		return (
 				<div>404: {translate`error.404`}</div>
@@ -27,4 +20,4 @@ class ErrorPage extends React.Component<ErrorTypes> {
   	}
 }
 
-export default withTranslation('common')(ErrorPage)
+export default withTranslation(ErrorPage)

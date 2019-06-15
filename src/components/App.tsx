@@ -1,16 +1,10 @@
 import * as React from 'react';
+import { loadi18 } from '../i18n';
 
-import Header from './Header';
-import { PageType } from '../Page';
-
-export default class App extends React.Component<PageType> {
-	render() {
-		const translate = this.props.t;
-		return (
-			<div>
-				<Header t={translate} />
-				{this.props.children}
-			</div>
-		)
+export default class App extends React.Component {
+	static async getInitialProps({req}) {
+		if (!req) return {};
+		await loadi18();
+		return {};
 	}
 }

@@ -7,7 +7,7 @@ class Home extends React.Component<PageType> {
 	render() {
 		const translate = this.props.t;
     	return (
-			<div>{translate`string.welcome`}</div>
+			<div onClick={() => alert('test')}>{translate`string.welcome`}</div>
     	)
   	}
 }

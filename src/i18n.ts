@@ -5,8 +5,9 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
 const NextI18NextInstance = new NextI18Next({
-	defaultLanguage: 'en-GB',
-	otherLanguages: ['en-US', 'cs-CZ'],
+	defaultLanguage: 'en-US',
+	otherLanguages: ['en-GB', 'cs-CZ'],
+	fallbackLng: 'en-US',
 	browserLanguageDetection: true
 })
 
@@ -25,7 +26,7 @@ export function loadi18() {
 	return i18next.use(NextI18NextInstance)
 	.use(LanguageDetector)
 	.init({
-		fallbackLng: 'en-GB',
+		fallbackLng: 'en-US',
 		interpolation: {
 			escapeValue: false
 		}

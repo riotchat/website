@@ -1,13 +1,12 @@
 import * as React from 'react';
 
 import Head from 'next/head';
-import { translate } from '../i18n';
 
-export default class Header extends React.Component {
+export default class Header extends React.Component<{title: string}> {
 	render() {
     	return (
 			<Head>
-				<title>Riot - {translate`string.welcome`}</title>
+				<title>Riot | {this.props.title}</title>
 			</Head>
     	)
   	}

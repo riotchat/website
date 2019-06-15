@@ -1,0 +1,12 @@
+$mobile-desktop-border: 1024px;
+
+@mixin media($device) {
+    @if $device == "mobile" {
+        @media (max-width: $mobile-desktop-border) { @content; }
+    } @else if $device == "desktop" {
+        @media (min-width: $mobile-desktop-border + 1px) { @content; }
+    } @else {
+        @warn "#{$device} is not a valid device";
+        @content;
+    }
+}

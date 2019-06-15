@@ -1,0 +1,154 @@
+.card {
+  margin: 10px;
+  padding: 17px 22px;
+  width: 465px;
+  height: 160px;
+  background: lightblue;
+  border-radius: 6px;
+  position: relative;
+  user-select: none;
+
+  background-size: cover;
+  background-position: center;
+}
+
+.opacity {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(64, 64, 64, 0.6);
+  border-radius: 6px;
+  padding: 15px;
+}
+
+.invitation {
+  color: #efefef;
+  display: block;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.icon {
+  margin-right: 20px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  background: grey;
+
+  background-size: cover;
+  background-position: center;
+
+  img {
+    height: 100%;
+  }
+}
+
+.verified {
+  vertical-align: middle;
+  font-size: 25px;
+  margin-right: 5px;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.status {
+  padding: 4px 10px;
+  display: inline;
+  font-size: 12px;
+  border-radius: 60px;
+  white-space: nowrap;
+  //position: relative;
+
+  /*backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);*/
+  background-color: gray;
+
+  &:first-child {
+    margin-right: 5px;
+  }
+
+  /*.blur {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        border-radius: 60px;
+        filter: blur(8px);
+    }*/
+}
+
+.info {
+  margin-top: 10px;
+}
+
+.dotOnline {
+  margin-right: 5px;
+  height: 8px;
+  width: 8px;
+  background-color: #14b89c;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dotMembers {
+  margin-right: 5px;
+  height: 8px;
+  width: 8px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.join {
+  position: relative;
+  flex-grow: 1;
+}
+
+.button {
+  padding: 7px 15px;
+  border-radius: 4px;
+  background: mediumslateblue;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translate(0%, -50%);
+  transition: .3s;
+
+  &:hover {
+    color: white;
+    background: #8a7bed;
+  }
+  &:active {
+    color: white;
+    background: #6859cc;
+  }
+}
+
+.plus {
+  vertical-align: middle;
+  font-size: 20px;
+  padding-right: 5px;
+}
+
+.flex {
+  display: flex;
+  position: absolute;
+  top: 60%;
+  left: 0px;
+  transform: translate(0%, -60%);
+  width: 100%;
+  padding: 15px;
+}

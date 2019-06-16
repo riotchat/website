@@ -22,7 +22,8 @@ const Language: React.FunctionComponent<{code: string}> = (props) => {
                 i18n.changeLanguage(props.code);
             });
         }} className={`${css.language} ${active ? css.active : ""}`}>
-            <img src={`https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/flags/4x3/${countryCode}.svg`} height="16px" style={{marginRight: "10px", borderRadius: "2px"}}/>{props.children}
+            <img src={`https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/flags/4x3/${countryCode}.svg`} height="16px" style={{marginRight: "10px", borderRadius: "2px"}}/>
+            <span>{props.children}</span>
         </div>
     )
 }
@@ -94,7 +95,12 @@ export class Navigation extends React.Component<{ fixed?: boolean }, { openMenu:
                                             <Language code="en-GB">English (GB)</Language>
                                             <Language code="en-US">English (US)</Language>
                                         </div>
-                                        <Link href="/translate"><a className={css.translate}><i className={`${css.icon} bx bx-globe-alt`} style={{color: '#7abf7c', fontSize: "24px"}}></i> {t('navigation.helptranslate')}</a></Link>
+                                        <Link href="/translate">
+                                            <a className={css.translate}>
+                                                <i className={`${css.icon} bx bx-globe-alt`} style={{color: '#7abf7c', fontSize: "24px"}}></i>
+                                                <span>{t('navigation.helptranslate')}</span>
+                                            </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </li>

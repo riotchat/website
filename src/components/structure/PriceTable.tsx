@@ -30,7 +30,7 @@ export const PriceTable: React.FunctionComponent = () => {
                             <li><i className={`${css.icon} bx bx-plus`} style={{color: '#E886F3'}}></i>{t('homepage.pricetable.pro.perk4')}</li>
                         </ul>
                     </div>
-                    <Link href="/pro"><a className={css['btn-purple']} style={{width: "auto"}}>{t('homepage.pricetable.pro.button')}</a></Link>
+                    <Link href="/pro"><a className={css.btnPurple} style={{width: "auto"}}>{t('homepage.pricetable.pro.button')}</a></Link>
                 </div>
             </div>
             <div id="free" className={css.column}>

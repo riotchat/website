@@ -106,7 +106,7 @@
                 padding: 10px;
                 overflow-y: auto;
                 @include media(mobile) {
-                    height: calc(100% - 70px);
+                    height: calc(100% - 46px);
                 }
                 .language {
                     margin-bottom: 5px;
@@ -117,6 +117,9 @@
                     transition: 0.3s;
                     line-height: 16px;
                     border-radius: 4px;
+
+                    display: flex;
+                    align-items: center;
 
                     &.active, &:hover {
                         background-color: #E8E8E8; 
@@ -137,6 +140,9 @@
                 transition: 0.3s;
                 text-decoration: none;
                 color: black;
+
+                display: flex;
+                align-items: center;
 
                 &:hover {
                     background-color: #BBBBBB;

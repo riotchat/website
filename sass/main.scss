@@ -1,6 +1,8 @@
 @import "./colors";
 @import "../sass/mixins";
 
+@import url('https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css');
+
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
 
 @font-face {
@@ -27,38 +29,49 @@
     height: 100vh;
 }
 
-html, body {
-	color: white;
-	margin: 0;
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    color: white;
+    margin: 0;
     padding: 0;
     font-family: "Open Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
     background: #333234;
 }
 
 /* ---------------------- Styling ---------------------- */
 
-h1 { /* Headers */
+h1 {
+    /* Headers */
     font-size: 48px;
     line-height: 60px;
     margin: 7px 0;
 }
 
-h2 { /* Features Title */
+h2 {
+    /* Features Title */
     font-size: 30px;
     margin: 7px 0;
 }
 
-h3 { /* Features Subtitle - Riot PRO */
+h3 {
+    /* Features Subtitle - Riot PRO */
     margin: 5px 0;
     font-size: 30px;
 }
 
-h4 { /* Subtitle */
+h4 {
+    /* Subtitle */
     margin: 10px 0;
     user-select: none;
 }
 
-h5 { /* Footer Menu Title */
+h5 {
+    /* Footer Menu Title */
     font-size: 1.17em;
     margin: 10px 0;
     user-select: none;
@@ -121,7 +134,8 @@ br {
     user-select: none;
 }
 
-.pro-title .pro { /* Riot PRO Text */
+.pro-title .pro {
+    /* Riot PRO Text */
     display: inline-block;
     margin-left: 12px;
     font-size: 48px;
@@ -148,7 +162,8 @@ br {
     font-size: 24px;
 }
 
-.pro { /* Riot PRO Text */
+.pro {
+    /* Riot PRO Text */
     margin-left: 12px;
     font-size: 44px;
     font-family: "Pro", sans-serif;
@@ -161,13 +176,15 @@ br {
     -webkit-text-fill-color: transparent;*/
 }
 
-.disclaimer { /* Copyright disclaimer */
+.disclaimer {
+    /* Copyright disclaimer */
     color: lightgrey;
     font-size: 12px;
     text-transform: uppercase;
 }
 
-.new { /* Tag for buttons */
+.new {
+    /* Tag for buttons */
     color: mediumpurple;
     background: white;
     margin-left: 5px;
@@ -213,9 +230,9 @@ br {
     margin-right: 5px;
     font-size: 22px;
     text-align: center;
-    width: 1.6em; 
+    width: 1.6em;
     user-select: none;
-  }
+}
 
 /* ---------------------- Header ---------------------- */
 
@@ -245,6 +262,7 @@ header {
     position: relative;
     height: 100%;
     top: 0px;
+
     @include media(desktop) {
         top: -100px;
     }
@@ -284,8 +302,9 @@ header {
     z-index: -2;
 }
 
-.opacity-layer { /* Opacity over background */
-    background-color: rgba(0,0,0,0.3);
+.opacity-layer {
+    /* Opacity over background */
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 section {
@@ -294,8 +313,9 @@ section {
     background-size: cover;
     background-position: center;
 
-    &:last-child { /* Shadow on last section */
-        box-shadow: 0px 9px 20px -18px rgba(0,0,0,0.75);
+    &:last-child {
+        /* Shadow on last section */
+        box-shadow: 0px 9px 20px -18px rgba(0, 0, 0, 0.75);
     }
 }
 
@@ -322,6 +342,7 @@ section {
 .content-side {
     margin: auto;
     padding: 0 100px;
+    position: relative;
 }
 
 .content-download {
@@ -334,9 +355,11 @@ section {
     margin: 20px;
     flex-direction: column;
     align-self: center;
+    position: relative;
 }
 
-.more { /* Learn More Buttons */
+.more {
+    /* Learn More Buttons */
     color: white;
     font-size: 18px;
     text-decoration: none;
@@ -394,10 +417,11 @@ section#pro {
 
 #pro-table {
     transform: scale(1.08);
-    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.45);
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.45);
 }
 
-.title { /* Price Table Title */
+.title {
+    /* Price Table Title */
     color: white;
     position: absolute;
     bottom: 0;
@@ -426,7 +450,8 @@ section#pro {
     font-weight: 600;
 }
 
-.pro-text { /* Riot PRO Text */
+.pro-text {
+    /* Riot PRO Text */
     font-family: "Pro", sans-serif;
 }
 
@@ -446,7 +471,7 @@ section#pro {
     top: 0;
     width: 100%;
     height: 200px;
-    background: rgba(0,0,0,0.25);
+    background: rgba(0, 0, 0, 0.25);
     z-index: 0;
 }
 
@@ -471,7 +496,8 @@ section#pro {
     font-weight: 600;
 }
 
-.sub { /* Subtext under price */
+.sub {
+    /* Subtext under price */
     color: white;
     position: absolute;
     top: 75px;
@@ -485,7 +511,8 @@ section#pro {
     margin: 10px 0;
 }
 
-.button { /* Button */
+.button {
+    /* Button */
     display: inline-block;
     color: white;
     margin-left: 15px;
@@ -516,7 +543,8 @@ section#pro {
     background: #2D2D2D;
 }
 
-.btn-purple { /* Button */
+.btnPurple {
+    /* Button */
     display: inline-block;
     color: white;
     /*margin: 10px;*/
@@ -536,17 +564,18 @@ section#pro {
     }
 }
 
-.btn-purple:hover {
+.btnPurple:hover {
     color: white;
     background: #8A7BED;
 }
 
-.btn-purple:active {
+.btnPurple:active {
     color: white;
     background: #6859CC;
 }
 
-.buttonGradient { /* Button */
+.buttonGradient {
+    /* Button */
     display: inline-block;
     color: #D468EE;
     /*margin: 10px;*/
@@ -594,7 +623,7 @@ section#pro {
     margin: 50px 10px 50px 10px;
     width: calc(100% - 20px);
     border-radius: 6px;
-    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.25);
     user-select: none;
 }
 
@@ -749,6 +778,7 @@ select:focus {
     height: 100px;
     width: 100px;
     align-self: center;
+
     img {
         height: 100px;
         width: 100px;
@@ -760,7 +790,7 @@ select:focus {
 .profile-overlay {
     height: 100px;
     width: 100px;
-    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
     z-index: 1;
     position: absolute;
 }
@@ -774,7 +804,7 @@ select:focus {
     margin: 20px;
     background: white;
     border-radius: 6px;
-    box-shadow: 0 9px 30px 0 rgba(35,39,42,.1);
+    box-shadow: 0 9px 30px 0 rgba(35, 39, 42, .1);
 }
 
 .profile-bio {
@@ -782,7 +812,7 @@ select:focus {
 }
 
 .profile-social-links {
-    position: absolute; 
+    position: absolute;
     bottom: 10px;
     left: 50%;
     transform: translate(-50%, 0%);
@@ -815,7 +845,7 @@ select:focus {
         overflow: hidden;
         position: relative;
         cursor: pointer;
-    
+
         img {
             height: 100%;
         }
@@ -838,52 +868,80 @@ select:focus {
     background-color: #14B89C;
     border-radius: 50%;
     display: inline-block;
-  }
+}
 
-  .dot-members {
+.dot-members {
     height: 8px;
     width: 8px;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
-  }
+}
+
+
+/* Work Cards */
+
+.workCardWrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+
+    .workCard {
+        flex: 0 0 auto;
+        margin: 10px 16px;
+        display: block;
+        position: relative;
+        height: 250px;
+        width: 280px;
+        background: rgb(236, 233, 233);
+        text-align: center;
+        border-radius: 6px;
+
+        .workCardBanner {
+            border-top-right-radius: 6px;
+            border-top-left-radius: 6px;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 150px;
+            background: mediumslateblue;
+            z-index: 0;
+        }
+    }
+}
 
 /* ---------------------- Footer ---------------------- */
 
 @media only screen and (max-width: 1024px) {
-    
+
     h2 {
         font-size: 45px;
     }
-    
+
     #pro-table {
         transform: none;
         box-shadow: none;
     }
-    
+
     .price-table {
         justify-content: center;
     }
-    
+
     .content-wrap {
         display: block;
     }
 }
 
 @media only screen and (max-width: 48em) {
-    
+
     #btn {
         width: 100%;
     }
-    
+
     header {
         height: 100vh;
     }
-    
-    /*.button {
-        width: 100%;
-    }*/
-    
+
     .perks {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -892,5 +950,65 @@ select:focus {
 @media only screen and (max-width: 36em) {
     .perks {
         grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.communitiesSection {
+    .opacity-layer {
+        position: relative;
+        z-index: 3;
+    }
+
+    .communitiesBackground {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: 0.2s opacity;
+        background-size: cover;
+        background-position: center;
+        z-index: 2;
+
+        &.active {
+            opacity: 1;
+            transition: 0.5s opacity;
+        }
+    }
+
+    .carouselItem {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) translate(0px, 0px) scale(1);
+
+        transition: 0.3s opacity ease-in-out, 0.3s transform ease-in-out;
+
+        &.front {
+            transform: translate(-50%, -50%) translate(0px, 0px) scale(1);
+            opacity: 1;
+            z-index: 3;
+        }
+
+        &.below {
+            transform: translate(-50%, -50%) translate(0px, 140px) scale(0.85);
+            opacity: 0.65;
+            z-index: 2;
+            cursor: pointer;
+        }
+
+        &.back {
+            transform: translate(-50%, -50%) translate(0px, 0px) scale(0.6);
+            opacity: 0;
+            z-index: 1;
+        }
+
+        &.above {
+            transform: translate(-50%, -50%) translate(0px, -140px) scale(0.85);
+            opacity: 0.65;
+            z-index: 2;
+            cursor: pointer;
+        }
     }
 }

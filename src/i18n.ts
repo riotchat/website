@@ -17,8 +17,8 @@ export default NextI18NextInstance;
 initReactI18next
 	.init(i18next);
 
-export function translate(string: any) {
-	return i18next.t(string);
+export function translate(string: any, arg?: any) {
+	return i18next.t(string, arg);
 }
 
 export var i18loaded = false;

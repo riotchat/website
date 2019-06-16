@@ -1,8 +1,10 @@
 import * as React from 'react';
 
+import { withTranslation, translate } from '../../i18n';
+
 import css from './Invite.scss';
 
-export const Invite: React.FunctionComponent<{
+export interface InviteInfo {
     serverName: string,
     iconURL: string,
     bgURL?: string,
@@ -11,36 +13,42 @@ export const Invite: React.FunctionComponent<{
         members: number,
         online?: number
     }
+}
+
+export const Invite: React.FunctionComponent<{
+    inviteInfo: InviteInfo
 }> = (props) => {
     let cardStyle: React.CSSProperties = {};
-    if(props.bgURL) cardStyle.backgroundImage = `url("${props.bgURL}")`;
+    if(props.inviteInfo.bgURL) cardStyle.backgroundImage = `url("${props.inviteInfo.bgURL}")`;
 
     return (
         <div className={css.card} style={cardStyle}>
             <div className={css.opacity} >
-                <span className={css.invitation}>You have been invited to join</span>
+                <span className={css.invitation}>{translate`homepage.invite.note`}</span>
                 <div className={css.flex}>
-                    <div className={css.icon} style={{ backgroundImage: `url("${props.iconURL}")` }}></div>
+                    <div className={css.icon} style={{ backgroundImage: `url("${props.inviteInfo.iconURL}")` }}></div>
                     <div>
                         <span className={css.name}>
-                            {props.verified && <i className={`${css.verified} bx bxs-badge-check`} style={{ color: 'mediumslateblue' }} />}
-                            {props.serverName}
+                            {props.inviteInfo.verified && <i className={`${css.verified} bx bxs-badge-check`} style={{ color: 'mediumslateblue' }} />}
+                            {props.inviteInfo.serverName}
                         </span>
-                        <div className={css.info}>
-                            {props.status.online !== undefined && (
+                        {props.inviteInfo.status !== undefined && (
+                            <div className={css.info}>
+                                {props.inviteInfo.status.online !== undefined && (
+                                    <div className={css.status}>
+                                        <span className={css.dotOnline} />
+                                        <span>{props.inviteInfo.status.online} {translate`homepage.invite.online`}</span>
+                                    </div>
+                                )}
                                 <div className={css.status}>
-                                    <span className={css.dotOnline} />
-                                    <span>{props.status.online} online</span>
+                                    <span className={css.dotMembers} />
+                                    <span>{props.inviteInfo.status.members} {translate`homepage.invite.members`}</span>
                                 </div>
-                            )}
-                            <div className={css.status}>
-                                <span className={css.dotMembers} />
-                                <span>{props.status.members} members</span>
                             </div>
-                        </div>
+                        )}
                     </div>
                     <div className={css.join}>
-                        <a className={css.button}><i className={`${css.plus} bx bx-plus`} style={{ color: 'white' }} />Join</a>
+                        <a className={css.button}><i className={`${css.plus} bx bx-plus`} style={{ color: 'white' }} />{translate`homepage.invite.join`}</a>
                     </div> 
                 </div>
             </div>

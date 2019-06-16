@@ -7,6 +7,7 @@ export default class Header extends React.Component<{title: string}> {
     	return (
 			<Head>
 				<title>Riot | {this.props.title}</title>
+				<link key="icon" rel="icon" href="/static/favicon.ico" />
 			</Head>
     	)
   	}

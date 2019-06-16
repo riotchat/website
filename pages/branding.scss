@@ -1,0 +1,131 @@
+@import "../sass/mixins";
+
+.color-wrapper {
+    width: 100%;
+
+    @include media(desktop) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 4px;
+    }
+}
+
+.color-box {
+    display: inline-block;
+    height: 300px;
+    width: 100%;
+    padding: 6px;
+    transition: .3s;
+
+    @include media(mobile) {
+        height: 160px;
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .light {
+        color: black;
+        background-image: url('/static/images/pattern/pattern-dark.png');
+    }
+
+    .dark {
+        color: white;
+        background-image: url('/static/images/pattern/pattern.png');
+    }
+
+    &:hover {
+        transform: scale(1.05);
+
+        @include media(mobile) {
+            transform: none;
+        }
+    }
+}
+
+.color-box-inner {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+
+    box-shadow: 10px 10px 10px -15px rgba(0,0,0,0.35);
+    transition: .3s;
+
+    .color-box:hover & {
+        @include media(desktop) {
+            box-shadow: 10px 10px 45px -25px rgba(0,0,0,0.75);
+        }
+    }
+}
+
+
+.color-code-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+    border-radius: 4px;
+}
+
+.color-box-inner:hover .color-code-overlay {
+  opacity: 1;
+}
+
+.color-label {
+    position: absolute;
+    padding: 10px;
+    user-select: none;
+}
+
+.color-codes {
+    position: absolute;
+    left: 1em;
+    bottom: 1em;
+}
+
+.color-codes-mobile {
+    display: none;
+    position: absolute;
+    left: 1em;
+    bottom: 1em;
+    
+    @include media(mobile) {
+        display: block;
+    }
+}
+
+.color-code {
+    font-weight: 600;
+    margin-right: 15px;
+    opacity: .7;
+    user-select: none;
+}
+
+.logo-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 1em;
+    justify-items: stretch;
+}
+
+.logoBig {
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+
+.logoSmall {
+    grid-column: 3;
+    grid-row: 1/3;
+}
+
+@include media(desktop) {
+    .font-container {
+        margin-left: 200px;
+    }
+}

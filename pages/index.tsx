@@ -234,8 +234,7 @@ export class CommunitiesCarousel extends React.Component<{
                     { (t, i18n) => (
                         <ContentOpacityLayer>
                             <div className={css['content-side']}>
-                                <div style={{ opacity: 0, width: "465px", height: "480px" }}>
-                                </div>
+                                <div className={css['content-side-size-fix']} />
                                 { this.props.invites.map((value, index, array) => {
                                     let plus = (this.state.currentItem + 1 === array.length) ? 0 : this.state.currentItem + 1;
                                     let minus = (this.state.currentItem - 1 === -1) ? array.length - 1 : this.state.currentItem - 1;
@@ -260,9 +259,11 @@ export class CommunitiesCarousel extends React.Component<{
                                 <h2>{translate`homepage.communities.title`}</h2>
                                 <p>{translate`homepage.communities.text`}</p>
                                 <Link href="/discover"><a className={css.more}>{translate`homepage.communities.discover`}</a></Link><br />
+                                <div style={{marginTop: "10px"}}>
                                 <span className={css.disclaimer}>
                                     <Trans i18nKey={`homepage.communities.${this.props.invites[this.state.currentItem].serverName.toLowerCase()}-note`} />
                                 </span>
+                                </div>
                             </div>
                         </ContentOpacityLayer>
                     )}

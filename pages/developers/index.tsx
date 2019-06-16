@@ -28,8 +28,8 @@ class Developers extends App {
 									<p style={{ marginBottom: "20px" }}>{translate`developers.subtitle`}</p>
 								</div>
 								<div className={css.buttons}>
-									<Link href="/developers/applications"><a className={css['btn-purple']}>{translate`developers.button`}</a></Link>
-									<Link href="/developers/documentation"><a className={css['button']}>{translate`button.documentation`}</a></Link>
+									<Link href="/developers/applications"><a className={css.btnPurple}>{translate`developers.button`}</a></Link>
+									<Link href="/developers/documentation"><a className={css.button}>{translate`button.documentation`}</a></Link>
 								</div>
 							</div>
 						</div>
@@ -62,7 +62,7 @@ class Developers extends App {
 								<h2 style={{ fontSize: "28px", fontFamily: "'Source Code Pro', monospace" }}>{translate`developers.documentation.title`}</h2>
 								<p>{translate`developers.documentation.text1`}</p>
 								<p>{translate`developers.documentation.text2`}</p>
-								<Link href="/developers/documentation"><a className={css['btn-purple']}>{translate`button.documentation`}</a></Link>
+								<Link href="/developers/documentation"><a className={css.btnPurple}>{translate`button.documentation`}</a></Link>
 							</div>
 							<div className={css.contentImage}>
 								<img src="/static/images/documentation.png" width="300px" />

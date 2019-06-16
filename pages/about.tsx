@@ -78,8 +78,9 @@ class About extends App {
                                 <div className={css.workCard}>yoohoo</div>
                                 <div className={css.workCard}>
                                     <div className={css.workCardBanner}>
-                                        s
+                                        <span className={css.workCardTitle}>Social Media Manager</span>
                                     </div>
+                                    <span className={css.workCardDesc}>Social Media</span>
                                 </div>
                                 <div className={css.workCard}>yoohoo</div>
                                 <div className={css.workCard}>yoohoo</div>

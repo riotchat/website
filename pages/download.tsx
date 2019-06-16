@@ -37,7 +37,7 @@ class Download extends App {
                             <br /><br />
                         </div>
                     </section>
-                </main>>
+                </main>
 				<Footer />
 			</div>
 		)
@@ -121,7 +121,7 @@ class DownloadButtons extends React.Component<{}, {
                     <div>
                     <div className={downloadCss.allPlatforms}>
                         <div className={downloadCss['dl-div']}>
-                            <img className={downloadCss['os-icon']} src="assets/svg/windows.svg" height="48px" />
+                            <img className={downloadCss['os-icon']} src="static/svg/windows.svg" height="48px" />
                             <div className={downloadCss['dl-name']}>
                                 <h2 className={downloadCss['os']}>Windows</h2>
                                 <span className={downloadCss['dl-version']}>{translate`stable`}: 1.01 | {translate`nightly`}: 1.02</span>
@@ -134,7 +134,7 @@ class DownloadButtons extends React.Component<{}, {
                             </div>
                         </div>
                         <div className={downloadCss['dl-div']}>
-                            <img className={downloadCss['os-icon']} src="assets/svg/apple.svg" height="48px" />
+                            <img className={downloadCss['os-icon']} src="static/svg/apple.svg" height="48px" />
                             <div className={downloadCss['dl-name']}>
                                 <h2 className={downloadCss['os']}>macOS</h2>
                                 <span className={downloadCss['dl-version']}>{translate`stable`}: 1.01 | {translate`nightly`}: 1.02</span>
@@ -147,7 +147,7 @@ class DownloadButtons extends React.Component<{}, {
                             </div>
                         </div>
                         <div className={downloadCss['dl-div']}>
-                            <img className={downloadCss['os-icon']} src="assets/svg/linux.svg" height="48px" />
+                            <img className={downloadCss['os-icon']} src="static/svg/linux.svg" height="48px" />
                             <div className={downloadCss['dl-name']}>
                                 <h2 className={downloadCss['os']}>Linux</h2>
                                 <span className={downloadCss['dl-version']}>{translate`stable`}: 1.01 | {translate`nightly`}: 1.02</span>
@@ -164,25 +164,25 @@ class DownloadButtons extends React.Component<{}, {
                             </div>
                         </div>
                         <div className={downloadCss['dl-div']}>
-                            <img className={downloadCss['os-icon']} src="assets/svg/apple.svg" height="48px" />
+                            <img className={downloadCss['os-icon']} src="static/svg/apple.svg" height="48px" />
                             <div className={downloadCss['dl-name']}>
                                 <h2 className={downloadCss['os']}>iOS</h2>
                                 <span className={downloadCss['dl-version']}>{translate`stable`}: 1.01 | {translate`nightly`}: 1.02</span>
                             </div>
                             <div className={downloadCss['dl-buttons']}>
                                 <a href="">
-                                    <img alt='Download on the App Store' src={'assets/images/appstore-button.svg'} height="52px" />
+                                    <img alt='Download on the App Store' src={'static/images/appstore-button.svg'} height="52px" />
                                 </a>
                             </div>
                         </div>
                         <div className={downloadCss['dl-div']}>
-                            <img className={downloadCss['os-icon']} src="assets/images/appstore-button.svg" height="48px" />
+                            <img className={downloadCss['os-icon']} src="static/svg/android.svg" height="48px" />
                             <div className={downloadCss['dl-name']}>
                                 <h2 className={downloadCss['os']}>Android</h2>
                                 <span className={downloadCss['dl-version']}>{translate`stable`}: 1.01</span>
                             </div>
                             <div className={downloadCss['dl-buttons']}>
-                                <img alt='Get it on Google Play' src={'assets/images/googleplay-button.svg'} height="52px" />
+                                <img alt='Get it on Google Play' src={'static/images/googleplay-button.png'} height="52px" />
                                 <a className={downloadCss['dl-button']} href="/static/downloads/android-apk" target="_blank">
                                     <i className={`${downloadCss['icon-os']} bx bx-download`} style={{ color: '#ffffff' }}></i> Download APK
                                 </a>

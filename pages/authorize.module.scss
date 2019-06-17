@@ -1,6 +1,25 @@
 @import "../sass/colors";
 @import "../sass/mixins";
 
+.at {
+    /*display: inline;*/
+    opacity: .65;
+    font-size: 50px;
+    padding-right: 8px;
+}
+
+.username {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.tag {
+    /*display: inline;*/
+    opacity: .65;
+    font-size: 50px;
+    padding-left: 8px;
+}
+
 
 
 .btnAuth {
@@ -24,16 +43,16 @@
         font-size: 16px;
         width: 100%;
     }
-}
 
-.btnAuth:hover {
-    color: white;
-    background: #8A7BED;
-}
+    &:hover {
+        color: white;
+        background: #8A7BED;
+    }
 
-.btnAuth:active {
-    color: white;
-    background: #6859CC;
+    &:active {
+        color: white;
+        background: #6859CC;
+    }
 }
 
 
@@ -41,7 +60,7 @@
     /* Button */
     display: inline-block;
     color: white;
-    /*margin: 10px;*/
+    margin-left: 15px;
     padding: 15px 50px;
     background: #282828;
     border: none;
@@ -54,17 +73,24 @@
     user-select: none;
 
     @include media(mobile) {
+        margin: 15px 0 0 0;
         font-size: 16px;
         width: 100%;
     }
+
+    &:hover {
+        color: white;
+        background: #8A7BED;
+    }
+    
+    &:active {
+        color: white;
+        background: #6859CC;
+    }
 }
 
-.btnAuthCancel:hover {
-    color: white;
-    background: #8A7BED;
-}
-
-.btnAuthCancel:active {
-    color: white;
-    background: #6859CC;
+.icon {
+    vertical-align: middle;
+    font-size: 25px;
+    padding-right: 8px;
 }

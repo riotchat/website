@@ -1,0 +1,70 @@
+@import "./colors";
+@import "../sass/mixins";
+
+
+
+.btnAuth {
+    /* Button */
+    display: inline-block;
+    color: red;
+    /*margin: 10px;*/
+    padding: 15px 50px;
+    background: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: .5s;
+    user-select: none;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(105, 156, 156, 0.4);
+
+    @include media(mobile) {
+        font-size: 16px;
+        width: 100%;
+    }
+}
+
+.btnAuth:hover {
+    color: white;
+    background: #8A7BED;
+}
+
+.btnAuth:active {
+    color: white;
+    background: #6859CC;
+}
+
+
+.btnAuthCancel {
+    /* Button */
+    display: inline-block;
+    color: white;
+    /*margin: 10px;*/
+    padding: 15px 50px;
+    background: #282828;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: .5s;
+    user-select: none;
+
+    @include media(mobile) {
+        font-size: 16px;
+        width: 100%;
+    }
+}
+
+.btnAuthCancel:hover {
+    color: white;
+    background: #8A7BED;
+}
+
+.btnAuthCancel:active {
+    color: white;
+    background: #6859CC;
+}

@@ -20,7 +20,7 @@ class About extends App {
 						<div className={css.header}>
 							<div className={css['header-info']}>
 								<img src="/static/downloads/branding/logo-gradient-r.svg" height="48px" />
-								<h2>{translate`about.title`}</h2>
+								<h2>yes time</h2>
 								<p>{translate`about.subtitle`}</p>
 							</div>
 						</div>
@@ -50,9 +50,9 @@ class About extends App {
 										something something
 										Oops my system crashed!
 								</ProfileCard>
-								<ProfileCard pfp="/static/images/insert.png" name="insert" roles={["Back-end Developer"]}
+								<ProfileCard pfp="/static/images/insert.png" name="insert" roles={["Fullstack Developer"]}
 									social={{ twitter: "insertish", github: "insertish", site: "https://insrt.uk" }}>
-										insert told me to put nothing here yet so here you go
+										yes
 								</ProfileCard>
 							</div>
 						</div>

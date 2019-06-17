@@ -3,8 +3,8 @@ import * as React from 'react';
 import Header from '../src/components/Header';
 import { withTranslation, translate, loadi18 } from '../src/i18n';
 
-import css from '../sass/main.scss';
-import formCss from '../sass/Form.scss'
+import css from '../sass/main.module.scss';
+import formCss from '../sass/Form.module.scss'
 import { Footer, Navigation } from '../src/components/structure/HeaderFooter';
 import { Content } from '../src/components/structure/Content';
 import { withRouter } from 'next/router';

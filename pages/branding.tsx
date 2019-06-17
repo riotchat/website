@@ -4,8 +4,8 @@ import App from '../src/components/App';
 import Header from '../src/components/Header';
 import { withTranslation, translate } from '../src/i18n';
 
-import css from '../sass/main.scss';
-import brandingCss from './branding.scss';
+import css from '../sass/main.module.scss';
+import brandingCss from './branding.module.scss';
 import { Footer, Navigation } from '../src/components/structure/HeaderFooter';
 import { ContentOpacityLayer } from '../src/components/structure/Content';
 import { Trans } from 'react-i18next';

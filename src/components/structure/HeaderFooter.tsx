@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { useTranslation, Translation } from 'react-i18next';
 
-import css from './HeaderFooter.scss';
-import homeCss from '../../../sass/main.scss';
+import css from './HeaderFooter.module.scss';
+import homeCss from '../../../sass/main.module.scss';
 import Link from 'next/link';
 import { translate } from '../../i18n';
 

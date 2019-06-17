@@ -10,7 +10,7 @@ import { Navigation, Footer } from '../src/components/structure/HeaderFooter';
 import { PriceTable } from '../src/components/structure/PriceTable';
 import Link from 'next/link';
 
-import css from '../sass/main.scss';
+import css from '../sass/main.module.scss';
 import { Invite, InviteInfo } from '../src/components/structure/Invite';
 
 const invites: InviteInfo[] = [
@@ -226,7 +226,7 @@ export class CommunitiesCarousel extends React.Component<{
             <section id="communities" className={css.communitiesSection}>
                 { this.props.invites.map((value, index, array) => {
                     return (
-                        <div style={{ backgroundColor: "gray", backgroundImage: `url("${value.bgURL}")` }}
+                        <div key={`cbg${index}`} style={{ backgroundColor: "gray", backgroundImage: `url("${value.bgURL}")` }}
                             className={`${css.communitiesBackground} ${this.state.currentItem === index ? css.active : ""}`} />
                     )
                 }) }

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useTranslation, Trans } from 'react-i18next';
 
-import css from '../../../sass/main.scss';
+import css from '../../../sass/main.module.scss';
 import Link from 'next/link';
 
 export const PriceTable: React.FunctionComponent = () => {

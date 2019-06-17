@@ -10,8 +10,8 @@ import { Navigation, Footer } from '../src/components/structure/HeaderFooter';
 import { PriceTable } from '../src/components/structure/PriceTable';
 import Link from 'next/link';
 
-import css from '../sass/main.scss';
-import cssAuth from '../sass/Authorize.scss';
+import css from '../sass/main.module.scss';
+import cssAuth from './authorize.module.scss';
 import { Invite, InviteInfo } from '../src/components/structure/Invite';
 
 class Authorize extends App {
@@ -20,7 +20,7 @@ class Authorize extends App {
 			<div>
 				<Header title={translate`homepage.name`} />
 				<main>
-                    <div style={{background: "darkred"}}>
+                    <div style={{background: "darkred", height: "100vh"}}>
                         <Navigation fixed={true} />
                         <div className={css.header}>
                             <div className={css['header-info']}>

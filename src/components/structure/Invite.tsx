@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { withTranslation, translate } from '../../i18n';
 
-import css from './Invite.scss';
+import css from './Invite.module.scss';
 
 export interface InviteInfo {
     serverName: string,

@@ -4,7 +4,7 @@ import App from '../src/components/App';
 import Header from '../src/components/Header';
 import { withTranslation, translate } from '../src/i18n';
 
-import css from '../sass/main.scss';
+import css from '../sass/main.module.scss';
 
 import { Footer, Navigation } from '../src/components/structure/HeaderFooter';
 import { ContentOpacityLayer } from '../src/components/structure/Content';

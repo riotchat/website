@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import css from '../../../sass/main.scss';
+import css from '../../../sass/main.module.scss';
 
 export const Content: React.FunctionComponent = (props) => (
     <div className={css.content}>

@@ -5,8 +5,8 @@ import App from '../src/components/App';
 import Header from '../src/components/Header';
 import { withTranslation, translate } from '../src/i18n';
 
-import css from '../sass/main.scss';
-import downloadCss from './download.scss';
+import css from '../sass/main.module.scss';
+import downloadCss from './download.module.scss';
 import { Footer, Navigation } from '../src/components/structure/HeaderFooter';
 
 class Download extends App {

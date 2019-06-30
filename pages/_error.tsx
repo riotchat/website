@@ -13,14 +13,16 @@ class ErrorPage extends React.Component<{statusCode: number}> {
 
 	render() {
 		return (
-			<div>
-				<Header title={'Pro'} />
+			<div style={{background: "linear-gradient(-20deg, #00D1D8, #009FA8)"}}>
 				{
 					this.props.statusCode === 404 ?
-						<main>
+						<main style={{ height: "100vh" }}>
+							<Header title={'Not Found'} />
 							<Navigation />
 							<div style={{ textAlign: "center" }}>
-								<img src="/static/images/404.png" width="100%" style={{ maxWidth: "600px" }} />
+								<div style={{ display: "flex", justifyContent: "center", width: "100%" }}>
+									<img src="/static/images/404.png" width="100%" style={{ maxWidth: "600px" }} />
+								</div>
 								<h2>{translate`error.404`}</h2>
 								<p><Trans i18nKey='error.goback'>
 									<a href="/"></a>
@@ -29,10 +31,10 @@ class ErrorPage extends React.Component<{statusCode: number}> {
 						</main>
 					:
 						<main>
+							<Header title={this.props.statusCode.toString()} />
 							<div>Caught error: {this.props.statusCode}</div>
 						</main>
 				}
-				<Footer />
 			</div>
 		);
   	}

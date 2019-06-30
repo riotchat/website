@@ -4,7 +4,7 @@ import App from '../../src/components/App';
 import Header from '../../src/components/Header';
 import { withTranslation, translate } from '../../src/i18n';
 
-import css from '../../sass/main.scss';
+import css from '../../sass/main.module.scss';
 import { Footer, Navigation } from '../../src/components/structure/HeaderFooter';
 import { Trans } from 'react-i18next';
 import Link from 'next/link';
@@ -44,7 +44,8 @@ class Developers extends App {
 							</div>
 						</Content>
 					</section>
-					<section id="github" style={{ color: "black", background: "linear-gradient(120deg, #fdfbfb, #ebedee )" }}>
+					{/*<section id="github" style={{ color: "black", background: "linear-gradient(120deg, #fdfbfb, #ebedee )" }}>*/}
+					<section id="github" style={{ color: "black", background: "radial-gradient(circle, #D7D7D7, #D7D7D7 1px, #FFF 1px, #FFF)", backgroundSize: "28px 28px" }}>
 						<Content>
 							<div className={css.hook}>
 								<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAEh0lEQVRoQ+1ZXXLTSBDuVqTkcUVZch4xJ1hzAsIJSE6w4QSQEyScAHOCmBNgToA4AeYEJI+2xrXiMZasplqxgjKaGY0Uebeoih6tmVZ//fP1jxH+8Af/cP3hEcD/7cHePBCG4dgBeEFER4A4QoBxFRwBzJEoIYAoB4iEEF/7AP8gAL7v+/uu+wYRTwFg1FKhq5xolmbZhyRJrlrevTveCQAr7rnuuYP4tuuHJe9M12l6liRJ0lZeawDDweAYEC8R0W/7MdN54vAiOotXq2kbua0AhEHwvi+r65QkgOkyjl/bgrAGMAzDSwTgWN/9QxTdZNmJTUhZAfhPlS/NQxQthHjZZK1GAMMguEDE8yZBu3hvE05GAEEQHO0hfpGVI4CPOdHUATgqwgrxaRcARPQTiaYbxNke0TE4zhtZTp7nr02JrQXAVHnged9U/L4heimEiMqPhYPBKSJOEPEv/o0AvnPRukeViD4C/F28Z8UBLhZCTMozvu+PDjzvR81YRMk6y57p8kELwBQ6iziu3WPAruuOq8BUXmGvZlk2Vyl0GIakusMeX8axkkCUALYV9oeO61UAuoSQfEcHgM/dpCl7oVaxlQAOg+AtIL7XKXWTpk9sKK4tKBMAyPMPi9WqVvmVAIZh+E1uxqrKyDnQVlHV+W0zyDmne64WcfxMfqmKZWUy/aZn+rwU4rgPpWshNBhMVExUnlMZrgaAGcVxnEtD+ChjsQ9A29y7KtlMwUjvlkJcVH+vATg0WIFod9YvlRqG4RQB/lGykeL7dQBBEAHiC42AmgX6sHxVBne76DifNHQ6X8bxc7MHTADy/GS5Ws36VroqT1f9yzMyhdc9EIZcDZXTVVNZ7wPYgwEMw3BelnybJOpDadsQ4nPNHjCEkK6Y9AnC2P0SXS+EuBcd7ZIYoJZEfSrPsoZBMEPEV0q5RF8XQhx1plG+qOtJ+gCy7YD/1clS0XjNAyYaY8GmzvChIBqHJ6KzagvO31O2xQeep7UCX9pVL4REX0zbjhzgeRzHc2MI8ctDUyLfDiRJDnDS1PvbeoSp0wH4ZFzVKBJY6QH+sdYPEV0TYiLTK8+s6zR913WzxlPYvuedW207FOGjBbBlg+RuRCSaLYU4KZLMdWdyq8F7TyKKgGiebjafdbNCsdHb23sFiGNE5Hn63v7UkLw/11k2UsnVjpTyUMNKrtO0WHPse16kKnY8Cy/j2KhUU3gqeyAibQ9m3ErIVblkIB4+kCiS216bVqOJ5WoAiK5vsmzceqgvcuF2ZX5vSirrwBYE9+YcCgkhRus0vbDJB+PoKCFoYrzGxZac0LTNB1uGUZ2zBqBJ3EYalT8qDzk50SQW4qwrCBsAtgWz0QOlkopJjVcckw1RUViQaBSvVh9tQDUBsFXeSKMqRZrmZdt9kRGARdi0DqHqhSJ5AXhuLdaE1edBAIiuNwCnbau7dQjV8oKXXwC8ALtb7HYBwHtSDkV522ATiq1DSBtWt3/ygdyr65TgYkaIPuX5pO1fSrLMzh6wtdCuzz0C2LWFm+Q/eqDJQrt+/wt19G5PCqGzHwAAAABJRU5ErkJggg==" />
@@ -90,4 +91,7 @@ class Developers extends App {
 	}
 }
 
-export default withTranslation(Developers);
+//export default withTranslation(Developers);
+
+import ComingSoon from '../../src/components/structure/comingsoon';
+export default ComingSoon;

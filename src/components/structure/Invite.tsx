@@ -29,7 +29,8 @@ export const Invite: React.FunctionComponent<{
                     <div className={css.icon} style={{ backgroundImage: `url("${props.inviteInfo.iconURL}")` }}></div>
                     <div>
                         <span className={css.name}>
-                            {props.inviteInfo.verified && <i className={`${css.verified} bx bxs-badge-check`} style={{ color: 'mediumslateblue' }} />}
+                            {/*{props.inviteInfo.verified && <i className={`${css.verified} bx bxs-badge-check`} style={{ color: 'mediumslateblue' }} />}*/}
+                            {props.inviteInfo.verified && <img className={css.verified} src="../static/icons/verified.svg"/>}
                             {props.inviteInfo.serverName}
                         </span>
                         {props.inviteInfo.status !== undefined && (

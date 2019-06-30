@@ -20,7 +20,6 @@ class About extends App {
 						<div className={css.header}>
 							<div className={css['header-info']}>
 								<img src="/static/downloads/branding/logo-gradient-r.svg" height="48px" />
-								<h2>yes time</h2>
 								<p>{translate`about.subtitle`}</p>
 							</div>
 						</div>

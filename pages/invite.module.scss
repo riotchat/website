@@ -1,0 +1,174 @@
+@import "../sass/colors";
+@import "../sass/mixins";
+
+.wrapper {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    @include media(mobile) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    @include media(desktop) {
+        height: 100vh;
+        justify-content: center;
+        align-items: stretch;
+    }
+}
+
+.rules {
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: relative;
+    /*height: 100vh;*/
+
+    @include media(desktop) {
+        flex: 50%;
+        -ms-flex: 50%; /* IE10 */
+    }
+
+    @include media(mobile) {
+        width: 100vw;
+    }
+
+    display: flex;
+    align-items: center;
+
+    ul {
+        max-width: 90%;
+    }
+}
+
+/* ------------ Informace ------------ */
+
+.invite {
+    font-size: 18px;
+}
+
+.info {
+    /*padding: 50px;
+    padding-left: 100px;*/
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    @include media(desktop) {
+        flex: 50%;
+        -ms-flex: 50%; /* IE10 */
+    }
+
+    @include media(mobile) {
+        width: 100vw;
+    }
+}
+
+.verified {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    vertical-align: middle;
+}
+
+.title {
+    /*display: block;*/
+    font-size: 40px;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+.btnJoin {
+    display: inline-block;
+    color: white;
+    padding: 15px 80px;
+    background: mediumslateblue;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: .5s;
+    user-select: none;
+    font-weight: 600;
+    box-shadow: 0 4px 14px 0 rgba(0, 118, 255, 0.39);
+
+    @include media(mobile) {
+        font-size: 16px;
+        width: 100%;
+    }
+
+    &:hover {
+        color: white;
+        background: #8A7BED;
+    }
+
+    &:active {
+        color: white;
+        background: #6859CC;
+    }
+}
+
+.statusWrap {
+    margin-bottom: 50px;
+}
+
+.status {
+    padding: 4px 15px;
+    display: inline;
+    font-size: 18px;
+    border-radius: 60px;
+    white-space: nowrap;
+    //position: relative;
+
+    /*backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);*/
+    background-color: gray;
+
+    &:first-child {
+        margin-right: 10px;
+    }
+
+    /*.blur {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        border-radius: 60px;
+        filter: blur(8px);
+    }*/
+}
+
+.dotOnline {
+    margin-right: 8px;
+    height: 10px;
+    width: 10px;
+    background-color: #14b89c;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.dotMembers {
+    margin-right: 8px;
+    height: 10px;
+    width: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.bg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+
+    background-size: cover;
+    background-position: center;
+}

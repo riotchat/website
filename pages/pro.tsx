@@ -9,6 +9,8 @@ import css from '../sass/main.module.scss';
 import { Footer, Navigation } from '../src/components/structure/HeaderFooter';
 import { ContentOpacityLayer } from '../src/components/structure/Content';
 
+import ComingSoon from '../src/components/structure/comingsoon';
+
 class Pro extends App {
 	render() {
 		return (
@@ -80,9 +82,10 @@ class Pro extends App {
 							<h1 style={{ fontFamily: 'Poppins, sans-serif', fontSize: '42px' }}>Ready?</h1>
 							<p style={{ marginBottom: '40px' }} >Support our development and get to lead your own riot.</p>
 						</div>
-						<div className={css.team}>
-
-						</div>
+						<div className={css.buttons}>
+                                    <a href="#sign-up" className={css.btnPurple} style={{ }}>$5 / month</a>
+                                    <a href="#lightweight" className={css.button}>$49.99 / year</a>
+                                </div>
 					</section>
 				</main>
 				<Footer />
@@ -91,4 +94,5 @@ class Pro extends App {
 	}
 }
 
-export default withTranslation(Pro);
+//export default withTranslation(Pro);
+export default ComingSoon;

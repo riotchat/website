@@ -12,7 +12,7 @@ import { Footer, Navigation } from '../src/components/structure/HeaderFooter';
 class Download extends App {
 	render() {
 		return (
-			<div>
+			<div style={{ background: "mediumslateblue" }}>
 				<Header title={'Download'} />
 				<main>
                     <Navigation fixed={true} />
@@ -44,7 +44,9 @@ class Download extends App {
 	}
 }
 
-export default withTranslation(Download);
+//export default withTranslation(Download);
+import ComingSoon from '../src/components/structure/comingsoon';
+export default ComingSoon;
 
 let os: "WIN" | "MAC" | "LINUX" | "ANDROID" | "IOS" | "UNKNOWN" = "UNKNOWN";
 

@@ -22,4 +22,6 @@ class Documentation extends App {
 	}
 }
 
-export default withTranslation(Documentation);
+//export default withTranslation(Documentation);
+import ComingSoon from '../../src/components/structure/comingsoon';
+export default ComingSoon;

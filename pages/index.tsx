@@ -14,10 +14,10 @@ import css from '../sass/main.module.scss';
 import { Invite, InviteInfo } from '../src/components/structure/Invite';
 
 const invites: InviteInfo[] = [
-    { serverName: "Terraria", iconURL: "/static/images/terraria-icon.png", bgURL: "/static/images/terraria.jpg", verified: true, status: { members: 8200, online: 4500 } },
-    { serverName: "Minecraft", iconURL: "/static/images/minecraft-icon.jpg", bgURL: "/static/images/minecraft.jpg", verified: true, status: { members: 15000, online: 6000 } },
     { serverName: "Overwatch", iconURL: "/static/images/header.png", bgURL: "/static/images/communities.jpg", verified: true, status: { members: 7000, online: 4000 } },
-    { serverName: "AutoChess", iconURL: "/static/images/autochess-icon.jpg", bgURL: "/static/images/autochess.png", verified: true, status: { members: 4500, online: 3100 } }
+    { serverName: "AutoChess", iconURL: "/static/images/autochess-icon.jpg", bgURL: "/static/images/autochess.png", verified: true, status: { members: 4500, online: 3100 } },
+    { serverName: "Terraria", iconURL: "/static/images/terraria-icon.png", bgURL: "/static/images/terraria-background.jpg", verified: true, status: { members: 8200, online: 4500 } },
+    { serverName: "Minecraft", iconURL: "/static/images/minecraft-icon.jpg", bgURL: "/static/images/minecraft.jpg", verified: true, status: { members: 15000, online: 6000 } }
 ]
 
 class Home extends App {
@@ -241,7 +241,7 @@ export class CommunitiesCarousel extends React.Component<{
 
                                     let position = this.state.currentItem === index ? "front" : (plus === index ? "below" : (minus === index ? "above" : "back"));
                                     return (
-                                        <div className={`${css.carouselItem} ${css[position]}`} onClick={
+                                        <div key={`car${index}`} className={`${css.carouselItem} ${css[position]}`} onClick={
                                             (e) => {
                                                 this.setTimeout(10000);
                                                 if(position !== "front" && position !== "back") this.setState({

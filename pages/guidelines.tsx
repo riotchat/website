@@ -11,7 +11,7 @@ import { Content } from '../src/components/structure/Content';
 class Guidelines extends App {
 	render() {
 		return (
-			<div>
+			<div style={{ background: "linear-gradient(#D468EE, #7B68EE)" }}>
 				<Header title={'Guidelines'} />
 				<main>
                 	<Navigation fixed={true} />
@@ -19,7 +19,7 @@ class Guidelines extends App {
                         <div style={{ margin: "0 auto", maxWidth: "1200px" }}>
                             <div style={{ margin: "20px" }}>
                                 <h1 style={{ fontFamily: 'Poppins, sans-serif', fontSize: '42px' }}>{translate`guidelines.title`}</h1>
-                                <p style={{ marginBottom: '40px' }} >{translate`guidelines.lastupdated`}</p>
+                                <p style={{ marginBottom: '40px' }} >{translate`guidelines.lastupdated`}: 19.06. 2019</p>
                             </div>
                         </div>
                     </section>
@@ -31,7 +31,7 @@ class Guidelines extends App {
                                     <h2>Acceptable Usage</h2>
                                     <p>Riot can cater to your community, guild, game server or your top-secret gamer group. We encourage you to:</p>
                                     <ul>
-                                        <li>Take advantage of RIOT's powerful community tools.</li>
+                                        <li>Take advantage of Riot's powerful community tools.</li>
                                         <li>Be kind and make friends with others on our platform.</li>
                                         <li>Have fun using and sharing content on the platform.</li>
                                         <li>Encourage others to better themselves instead of being against them.</li>

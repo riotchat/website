@@ -97,7 +97,7 @@ export class Navigation extends React.Component<{ fixed?: boolean }, { openMenu:
                                         </div>
                                         <Link href="/translate">
                                             <a className={css.translate}>
-                                                <i className={`${css.icon} bx bx-globe-alt`} style={{color: '#7abf7c', fontSize: "24px"}}></i>
+                                                <i className={`${css.icon} bx bx-globe-alt`} style={{color: '#7abf7c', fontSize: "24px", marginRight: "8px"}}></i>
                                                 <span>{t('navigation.helptranslate')}</span>
                                             </a>
                                         </Link>
@@ -150,7 +150,7 @@ export const Footer: React.FunctionComponent = (props) => {
             </FooterMenu>
             <FooterMenu header={translate`navigation.resources`}>
                 <Link href="/guidelines"><a>{translate`navigation.guidelines`}</a></Link>
-                <Link href="/tos"><a>{translate`navigation.terms`}</a></Link>
+                <Link href="/legal/tos"><a>{translate`navigation.terms`}</a></Link>
                 <Link href="/support"><a>{translate`navigation.support`}</a></Link>
             </FooterMenu>
             <FooterMenu header={translate`navigation.developers`}>
@@ -162,7 +162,7 @@ export const Footer: React.FunctionComponent = (props) => {
             <FooterMenu header={t('navigation.company')}>
                 <Link href="/about"><a>{translate`navigation.about`}</a></Link>
                 <Link href="/blog"><a>{translate`navigation.blog`}</a></Link>
-                <Link href="/jobs"><a>{translate`navigation.jobs`}</a></Link>
+                {/* <Link href="/jobs"><a>{translate`navigation.jobs`}</a></Link> */}
             </FooterMenu>
         </div>
     </footer>

@@ -2,7 +2,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "run": "next start"
+    "run": "next start",
+    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}' 'pages/**/*.{ts,tsx}'"
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",

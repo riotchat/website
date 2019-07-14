@@ -1,6 +1,9 @@
 {
-    "extends": ["tslint:latest", "tslint-react"],
+    "defaultSeverity": "error",
+    "extends": ["tslint:recommended", "tslint-react"],
+    "jsRules": {},
     "rules": {
-        
-    }
+        "jsx-alignment": true
+    },
+    "rulesDirectory": []
 }

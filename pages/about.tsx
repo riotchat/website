@@ -7,6 +7,7 @@ import { withTranslation, translate } from '../src/i18n';
 import css from '../sass/main.module.scss';
 
 import { Footer, Navigation } from '../src/components/structure/HeaderFooter';
+import { Trans } from 'react-i18next';
 
 class About extends App {
 	render() {
@@ -62,36 +63,42 @@ class About extends App {
 								<h1 style={{ color: "mediumslateblue", fontFamily: 'Poppins, sans-serif', fontSize: '42px' }}>{translate`about.contributors.title`}</h1>
 								<p style={{ color: "black", marginBottom: '40px' }}>{translate`about.contributors.subtitle`}</p>
 							</div>
-							<span style={{ color: "black" }}>We recognize ✨ All Contributors. <a style={{ color: "mediumslateblue" }} href="https://allcontributors.org/" target="_blank">Learn more</a></span>
+							<span style={{ color: "black" }}>
+                                <Trans i18nKey="about.contributors.note">
+                                    <a style={{ color: "mediumslateblue" }} href="https://allcontributors.org/" target="_blank"></a>
+                                </Trans>
+                            </span>
 						</div>
 					</section>
-					<section id="jobs" style={{ background: "white", textAlign: 'center', padding: '100px 0' }}>
-						<div className={css['section-wrap']}>
-							<div className={css['content-download']}>
-								<h1 style={{ color: "mediumslateblue", fontFamily: 'Poppins, sans-serif', fontSize: '42px' }}>{translate`about.work.title`}</h1>
-								<p style={{ color: "black", marginBottom: '40px' }}>{translate`about.work.subtitle`}</p>
-							</div>
-                            <div className={css.workCardWrapper}>
-                                <div className={css.workCard}>yoohoo</div>
-                                <div className={css.workCard}>yoohoo</div>
-                                <div className={css.workCard}>yoohoo</div>
-                                <div className={css.workCard}>
-                                    <div className={css.workCardBanner}>
-                                        <span className={css.workCardTitle}>Social Media Manager</span>
-                                    </div>
-                                    <span className={css.workCardDesc}>Social Media</span>
+					{ false && (
+                        <section id="jobs" style={{ background: "white", textAlign: 'center', padding: '100px 0' }}>
+                            <div className={css['section-wrap']}>
+                                <div className={css['content-download']}>
+                                    <h1 style={{ color: "mediumslateblue", fontFamily: 'Poppins, sans-serif', fontSize: '42px' }}>{translate`about.work.title`}</h1>
+                                    <p style={{ color: "black", marginBottom: '40px' }}>{translate`about.work.subtitle`}</p>
                                 </div>
-                                <div className={css.workCard}>yoohoo</div>
-                                <div className={css.workCard}>yoohoo</div>
-                                <div className={css.workCard}>yoohoo</div>
-                                <div className={css.workCard}>yoohoo</div>
-                                <div className={css.workCard}>yoohoo</div>
-                                <div className={css.workCard}>yoohoo</div>
-                                <div className={css.workCard}>yoohoo</div>
+                                <div className={css.workCardWrapper}>
+                                    <div className={css.workCard}>yoohoo</div>
+                                    <div className={css.workCard}>yoohoo</div>
+                                    <div className={css.workCard}>yoohoo</div>
+                                    <div className={css.workCard}>
+                                        <div className={css.workCardBanner}>
+                                            <span className={css.workCardTitle}>Social Media Manager</span>
+                                        </div>
+                                        <span className={css.workCardDesc}>Social Media</span>
+                                    </div>
+                                    <div className={css.workCard}>yoohoo</div>
+                                    <div className={css.workCard}>yoohoo</div>
+                                    <div className={css.workCard}>yoohoo</div>
+                                    <div className={css.workCard}>yoohoo</div>
+                                    <div className={css.workCard}>yoohoo</div>
+                                    <div className={css.workCard}>yoohoo</div>
+                                    <div className={css.workCard}>yoohoo</div>
+                                </div>
+                                <a style={{ color: "mediumslateblue" }} href="" target="_blank">{translate`about.work.note`}</a>
                             </div>
-							<a style={{ color: "mediumslateblue" }} href="" target="_blank">{translate`about.work.note`}</a>
-						</div>
-					</section>
+                        </section>
+                    )}
 				</main>
 				<Footer />
 			</div>

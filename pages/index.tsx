@@ -50,12 +50,13 @@ class Home extends App {
                     <section id="lightweight" style={{backgroundImage: "url('/static/images/lightweight.png')"}}>
                         <ContentOpacityLayer>
                             <div className={css.hook}>
-                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAEZklEQVRoQ+1ZTXLTSBR+r1uzJjeIXSg7CivYezInIDkBzgkwJ8A5QTwniDkB4gQke5tIzOxsyuEEeNaj7jfVsgSS3JK6JbmoVKGVXWq9/r7X778RHvmDjxw//Cbwq0+wsxPw7jc9zuQrJDpXpAighwi9+DfBAwI8xL8RfSHZx+C0H/9v+7Qi4N1vjhwm3xDROAVrCigmheRH0rkKTvtb0++K6xoRyACfIMJR082T09ki4iyS7K8mRKwJDL+sz0HCTVvgRdJEsCUGbz8/d+c2CrEiMAq/vgOgqckGi4Gbkz0K12TyHQBOF4OnV2ZrwSyMKpPhKK4RYWwquDmB2Ol9QfzSxKSMTmAYrJXJGINXJNsQSHzDX3ruRZ3Cagm8CL9OGNB1VhARfAOEAAFelW3QlsBOLl0tBieVJltJQDksEnzIg6dQkHOmjncYrucI8LpOSybvJeBbJDlGxEFuP4SL5XPXL5NRSiCx+0022ijNC+Je1jbbkiCCf4XDz4Jn/WC3Z3SbJaGikyDeL/OHUgKjcDUFwHcF09mzyxdf1mNGcGOi5f3QSaFwnLECn77z/tl4PBK3iPDk5/pyU9IS0Gk/FUYE86XnXqr/rcEnppgllhD4VDj50lPQEtBpv3ASc2Jw11jzAO+XA3cvqo3+Xp2RwA/6JKk/BT2BYHUPiF4Ts6j/Rg+k7jRV7bT03H5R/h4BVVU6TGzqgdivkAiXulLBNMNHMnbmXBW7R0AX9+2h5r/IRpqiLJskqULt58HTWVbGHoFhuParEpQJGQWYGEyk4LcAoErlo6Lm4ooWo082pkoAH5cDN+430mePwChc3QLgSxOgujWxton3quoYFWmcKLqxAb/bi+4Wg5MzKwJFu6urKsvsvBDnc2EyC6iyBCEKFt7JaQ2BfNlrW9PoHC27YZ0C6vYrvteY0OEImES4DgjkfaBLE9IVh0U/yhLYta7i+88qgMKld5LLT4dwYm3arypPzAOGgRN3FEa3gDARkt8pcJyJl0Awa9tHG4XRQyQycw1XrzRKZCaO1hUgWzlGpYQSOgxWQbEzst2s6/WqmVp6bjzpq8wD6mVdOd01ODN5FuV0EjEe8l2R2TaHWFVVnli1lIcAZybTsqVUQnWnoJoKQfzUZOBkBiy/Sleh1hWH1mMVIAoici66Go//KPJKymtqOlZJBZcMtrbC4X9mpwlNNP4D/G4SoalQWw620g3KZz84bToWT81U3S/oBsZU0vgbhdHiotgfmJjppnBq8JSUDerWxfiiYhiuXwPBVHcxosALyScm8mpno1kydflBTZUBwWfIH/4T8C31E5Xd/+BwLEn0gOAcEXJtYV5h9WZTm8iq7Dm54Jh3nSPSPvqgFxy5iMGiCRGqK6bMCNDelRVwRJpF0pmZmEwjHyiDtWs4YiLqku/YBn4yoveF5NMmwNO9rHygCqCyc8bkOQO5u2YlVNesMSkFFpHigZQE5kvJ/K7ySGcEbLTf5drfBLrUZhNZj/4E/gfnjZtPo/oD9wAAAABJRU5ErkJggg==" draggable={false}/>
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAADLUlEQVRoQ+2YMVLbQBSG/2e5MU3MDfCMqKOJ3QMlVgGcIHCC+AaQEyQ5AXCCOIVNid1biVLbDM4NoIEUkl9mRTzRWFrtCmnlMINarVb/t+9/b98u4YU/9ML14xVg3RF8jUDeCDjXt03rd3hAzA5ADoBd6RzMPojuQDQKULv091vz1bGVRcAZ3DoWwg8ADonQzAsO5o8Td/tsLQCdq5tTMCd+ngeCgUuvax9XCiDsUn8Mv2baRJuCx5PudsJuxiwUiX8IrkGRzws/zLjzXHuzkgiULX4petK1EwteegRMiRcQxgF0xTNwT2CfQT4hKqc7Oh4zCqAtnvlnWKsfxmt652q6y0x9At5kgRgD0BYP3IcNa8vfa92tChUQYLquHEBXvBDGwBeva/dkItuDqU9Eb9PeM+OX59pbuavQ0w662AHYIUJiAjA3tUulZDddiuoMpyN5PuTcB9pXs/fEEDufvFfRybzYGFUEsgBk3ybKaNRsPYbnBBzm1KccLjajcMNqpeWAiHSdwh+ySRg48rp2X2mh9mDWJ8KBUs3zB4yChnUUh4jEIziXWVGUXa9rpzaA6RF4CEayZHq+7n9fikgA6FON5szsqKIta+TEjKk7cWQjwxC6CyFWPyTLSTsLSAHEi/8GQlG5MnuhdUNkWWcZQWUzty4IIT5sWL20ihW3nxJgHXZi0S9t1HdV4jNzYDXJqopEHvG5AKqIhK5tclso/oGpSOgkbFrp1coB03Z6rvjcFjIRiSLiCwGUkRPM+Oa5dqGmUWmh5d0OM+aea5+Ua6f0Hl+3zdCKQGc4E8e86EzAjItyIQwDvBve9GrgT/EVKRfCMEB7OLslJI+R5UEYBFDdEpQDYRJgMD0D0WlWQhWGULTKOsksrULZNwTRFck9gOO0c6puiV0wTr679oWOUNkYKYDM/08T8Tjges93W37Wz1VtR9CwNnU6zqx/ZERgxskPebxgusizanKI4v7P3Ac6QwHAYwbNxSXsgmp92blUZYFUCOK9yf72SPWt6r1yJ1ZNoPs+DlG0/ynUTusKThv399Lss85RUfc/lUVAV1Deca8AeVes7PEvPgJ/AHdn5ECFZMSTAAAAAElFTkSuQmCC" draggable={false}/>
                                 <h2>{translate`homepage.lightweight.title`}</h2>
                                 <p>{translate`homepage.lightweight.text`}</p>
                             </div>
                             <div className={css['content-image']}>
-                                <img className={css.image} src="/static/images/security.png" />
+                                <img className={css.image} src="/static/images/lightweight.svg" width="800px"/>
+                                <span className={css.note}>{translate`homepage.lightweight.note`}</span>
                             </div>
                         </ContentOpacityLayer>
                     </section>
@@ -80,7 +81,7 @@ class Home extends App {
                                 <a href="https://github.com/riotchat" className={css.button} target="_blank">{translate`button.github`}</a>
                             </div>
                             <div className={css['content-image']}>
-                                <img className={css.image} src="/static/images/open-source.png" />
+                                <img className={css.image} src="/static/images/open-source.png" height="800px"/>
                             </div>
                         </ContentOpacityLayer>
                     </section>

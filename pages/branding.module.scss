@@ -1,6 +1,6 @@
 @import "../sass/mixins";
 
-.color-wrapper {
+.colorWrapper {
     width: 100%;
 
     @include media(desktop) {
@@ -10,7 +10,7 @@
     }
 }
 
-.color-box {
+.colorBox {
     display: inline-block;
     height: 300px;
     width: 100%;
@@ -42,7 +42,7 @@
     }
 }
 
-.color-box-inner {
+.colorBoxInner {
     position: relative;
     height: 100%;
     width: 100%;
@@ -52,7 +52,7 @@
     box-shadow: 10px 10px 10px -15px rgba(0,0,0,0.35);
     transition: .3s;
 
-    .color-box:hover & {
+    .colorBox:hover & {
         @include media(desktop) {
             box-shadow: 10px 10px 45px -25px rgba(0,0,0,0.75);
         }
@@ -60,7 +60,7 @@
 }
 
 
-.color-code-overlay {
+.colorCodeOverlay {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -73,23 +73,23 @@
     border-radius: 4px;
 }
 
-.color-box-inner:hover .color-code-overlay {
+.colorBoxInner:hover .colorCodeOverlay {
   opacity: 1;
 }
 
-.color-label {
+.colorLabel {
     position: absolute;
     padding: 10px;
     user-select: none;
 }
 
-.color-codes {
+.colorCodes {
     position: absolute;
     left: 1em;
     bottom: 1em;
 }
 
-.color-codes-mobile {
+.colorCodesMobile {
     display: none;
     position: absolute;
     left: 1em;
@@ -100,14 +100,14 @@
     }
 }
 
-.color-code {
+.colorCode {
     font-weight: 600;
     margin-right: 15px;
     opacity: .7;
     user-select: none;
 }
 
-.logo-grid {
+.logoGrid {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-gap: 1em;
@@ -125,7 +125,7 @@
 }
 
 @include media(desktop) {
-    .font-container {
+    .fontContainer {
         margin-left: 200px;
     }
 }

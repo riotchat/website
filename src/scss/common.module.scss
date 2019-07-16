@@ -1,156 +1,193 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:700&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap');
 
 @font-face {
-    font-family: "Pro";
-    src: url("/static/fonts/pro.otf");
+	font-family: "Pro";
+	src: url("/static/fonts/pro.otf");
 }
 
 @font-face {
-    font-family: "VX Rocket";
-    src: url("/static/fonts/vxrocket.ttf");
+	font-family: "VX Rocket";
+	src: url("/static/fonts/vxrocket.ttf");
 }
 
 * {
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 html { scroll-behavior: smooth; }
 
 html, body {
-    color: #464646;
-    margin: 0;
-    padding: 0;
-    font-family: "Open Sans", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    background: #fff;
+	color: #464646;
+	font-family: "Open Sans", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	background: #fff;
 }
 
 h1 {
-    font-family: "Poppins", sans-serif;
-    font-size: 36px;
+	font-family: "Poppins", sans-serif;
+	font-size: 48px;
 }
 
 h2 {
-    margin: 0 0 10px;
-    color: #7B68EE;
-    font-size: 28px;
+	margin: 0 0 10px;
+	color: #7B68EE;
+	font-size: 28px;
 }
 
 p {
-    margin: 20px 0 0;
-    color: #464646;
-    //font-size: .9375rem;
-    font-size: 1rem;
+	margin: 0 0 20px;
+	color: #464646;
+	font-size: 1rem;
 }
 
 img {user-select: none;}
 
 .link {
-    color: #7B68EE;
-    font-size: .875rem;
-    text-decoration: none;
+	color: #7B68EE;
+	text-decoration: none;
+	user-select: none;
+	&::after {content: " \203A";}
 
-    &:hover {
-        text-decoration: underline;
-    }
+	&:hover {
+		text-decoration: underline;
+	}
 }
 
 .pro {
-    color: #7B68EE;
-    font-size: 60px;
-    font-weight: 400;
-    font-family: "VX Rocket", sans-serif;
-    margin-bottom: 4px;
+	color: #7B68EE;
+	font-size: 60px;
+	font-weight: 400;
+	font-family: "VX Rocket", sans-serif;
+	margin-bottom: 4px;
 
-    span {
-        margin-left: 5px;
-        font-family: "Pro", sans-serif;
-        font-style: italic;
-        font-size: 48px;
-        font-weight: 700;
-    }
+	span {
+		margin-left: 5px;
+		font-family: "Pro", sans-serif;
+		font-style: italic;
+		font-size: 48px;
+		font-weight: 700;
+	}
 }
 
 .tag {
-    color: white;
-    //margin: 0 0 10px 0;
-    padding: 2px 5px;
-    font-size: 12px;
-    background: #7B68EE;
-    border-radius: 4px;
+	color: white;
+	padding: 2px 5px;
+	font-size: 12px;
+	background: #7B68EE;
+	border-radius: 4px;
 }
 
 .button {
 	display: flex;
+    align-items: center;
 	color: white;
-	padding: 2px 16px;
-	text-align: center;
+	padding: 15px 50px;
+	background: #7B68EE;
+	border: none;
+	//width: auto;
 	text-decoration: none;
-	height: 38px;
-	justify-content: center;
-	align-items: center;
-	font-size: .875rem;
 	border-radius: 4px;
-    cursor: pointer;
-    background: black;
+	font-size: 1rem;
+	user-select: none;
+	box-shadow: 2px 2px 6px rgba(0,0,0,.2);
+    transition: box-shadow .3s ease, background-color .3s ease;
 
-	&.github {background: black;}
-	&.primary {background: #4f545c;} 
-	&.secondary {background: white;}
+
+	&.github {background-color: #211F1F;}
+	&.primary {background-color: #4f545c;} 
+	&.secondary {background-color: white;}
+
+	@media only screen and (max-width: 900px) {width: 100%;}
 }
 
+/*.icon {
+
+}*/
+
+.iconText {
+	padding-right: 8px;
+}
+
+header {
+	display: flex;
+	position: relative;
+	color: white;
+	height: 800px;
+	background: #7B68EE;
+	@media only screen and (max-width: 900px) {height: 100vh;}
+
+	.wrapper {
+		display: flex;
+		margin: 0 auto;
+		align-items: center;
+		box-sizing: border-box;
+		width: 100%;
+		padding: 20px;
+		max-width: 1400px;
+		//height: 100%;
+
+		.innerWrapper {
+			display: block;
+		}
+	}
+}
 
 section {
-    position: relative;
-    width: 100%;
-    &:nth-child(even) { background: #ECECEC; }
+	position: relative;
+	width: 100%;
+	&:nth-child(even) { background: #ECECEC; }
 
-    .container {
-        display: flex;
-        position: relative;
-        align-items: center;
-        height: 660px;
-        max-width: 1000px;
-        width: 100%;
-        margin: 0 auto;
-        padding: 70px 20px;
+	.container {
+		display: flex;
+		position: relative;
+		align-items: center;
+		height: 660px;
+		max-width: 1000px;
+		width: 100%;
+		margin: 0 auto;
+		padding: 70px 20px;
 
-        @media only screen and (max-width: 900px) {flex-direction: column; height: auto;}
+		@media only screen and (max-width: 900px) {flex-direction: column; height: auto;}
 
-        .media {
-            display: flex;
-            align-items: center;
-            width: 50%;
-            justify-content: center;
-            @media only screen and (max-width: 900px) {width: 100%;}
+		.icon {display: block;}
 
-            img {
-                height: auto;
-                max-width: 100%;
-                user-select: none;
-            }
-        }
+		.media {
+			display: flex;
+			align-items: center;
+			height: 100%;
+			width: 50%;
+			justify-content: center;
+			@media only screen and (max-width: 900px) {width: 100%;}
 
-        .text {
-            width: 50%;
-            margin: 0 40px 0 0;
-            &:nth-child(even) { margin: 0 0 0 20px; }
-            @media only screen and (max-width: 900px) {
-                width: 100%;
-                margin: 0;
-                margin: 0 0 40px 0;
-                &:nth-child(even) { margin: 40px 0 0 0; }
-            }
-        }
-    }
-}
+			img {
+				height: auto;
+				max-width: 100%;
+				user-select: none;
+			}
+		}
 
-section #opensource {
-    background: #4533B1;
-    color: white !important;
+		.text {
+			width: 50%;
+			margin: 0 40px 0 0;
+			&:nth-child(even) { margin: 0 0 0 20px; }
+			@media only screen and (max-width: 900px) {
+				width: 100%;
+				margin: 0;
+				margin: 0 0 40px 0;
+				&:nth-child(even) { margin: 40px 0 0 0; }
+			}
+		}
+	}
 }
 
 footer {
-    height: 70px;
-    background: #7B68EE;
+	display: flex;
+	align-items: center;
+	height: 60px;
+	background: #7B68EE;
 }

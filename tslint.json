@@ -3,6 +3,8 @@
     "extends": ["tslint:recommended", "tslint-react"],
     "jsRules": {},
     "rules": {
+        "indent": [true, "tabs"],
+        "curly": [true, "ignore-same-line"],
         "jsx-alignment": true
     },
     "rulesDirectory": []

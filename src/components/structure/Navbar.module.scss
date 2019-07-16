@@ -1,0 +1,17 @@
+nav.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	box-sizing: border-box;
+	width: 100%;
+	height: 80px;
+	padding: 20px 30px;
+
+	z-index: 100;
+	background: linear-gradient(#0000007F, #00000000);
+
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}

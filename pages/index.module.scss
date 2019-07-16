@@ -1,0 +1,18 @@
+section#opensource {
+	background: #4533B1;
+	h2 {font-family: "Source Code Pro", sans-serif; color: white;}
+	p {color: #CECECE;}
+}
+
+.row {
+	.svg {height: 30px; opacity: .5;}
+	svg {
+		position: relative;
+		//height: 30px;
+		//opacity: .5;
+		margin-right: 20px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
